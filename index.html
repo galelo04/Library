@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+    <script defer src="script.js"></script>
+    <title>Library</title>
+</head>
+<body>
+    <div class="mainContainer">
+        <header>
+            <h1>My Library</h1>
+            <dialog id="addBookDialog">
+                <form method="dialog">
+                    <ul>
+                        <li><label for="bookTitle">Book Title: </label><input type="text" id="bookTitle" name="title" required></li>
+                        <li><label for="bookAuthor"></label>Book Author: <input type="text" id="bookAuthor" name="author" required></li>
+                        <li><label for="bookNOPages">No of Pages: </label><input type="number" id="bookNOPages" name="pages" min="1" required></li>
+                        <li><label for="bookIsRead">Read? </label><input type="checkbox" id="bookIsRead" checked></li>
+                    </ul>
+                    <div>
+                        <button value="cancel" formnovalidate>Cancel</button>
+                        <button type="submit" id="addBtn" value="default">Add</button>
+                      </div>
+                </form>
+            </dialog>
+            <button id="addNewBtn">Add a new book</button>
+        </header>
+        <main>
+            <div class="container">
+                <dialog id="showBookDialog">
+                    <div id="showTitle"></div>
+                    <div id="showAuthor"></div>
+                    <div id="showNOPages"></div>
+                    <div id="readStatus"></div>
+                    <div>
+                        <button class="close">Close</button>
+                    </div>
+                </dialog>
+                <div class="bookShelf"></div>
+            </div>
+        </main>
+        <footer>
+            <p>Copyright  &copy;  Mostafa Ahmed</p>
+        </footer>
+    </div>
+</body>
+</html>
