@@ -15,30 +15,34 @@
         <header>
             <h1>My Library</h1>
             <dialog id="addBookDialog">
-                <form method="dialog">
-                    <ul>
-                        <li><label for="bookTitle">Book Title: </label><input type="text" id="bookTitle" name="title" required></li>
-                        <li><label for="bookAuthor"></label>Book Author: <input type="text" id="bookAuthor" name="author" required></li>
-                        <li><label for="bookNOPages">No of Pages: </label><input type="number" id="bookNOPages" name="pages" min="1" required></li>
-                        <li><label for="bookIsRead">Read? </label><input type="checkbox" id="bookIsRead" checked></li>
-                    </ul>
-                    <div>
-                        <button value="cancel" formnovalidate>Cancel</button>
-                        <button type="submit" id="addBtn" value="default">Add</button>
-                      </div>
-                </form>
+                <div class="dialogContainer">
+                    <form>
+                        <ul>
+                            <li><label for="bookTitle">Book Title: </label><input type="text" id="bookTitle" name="title" required></li>
+                            <li><label for="bookAuthor"></label>Book Author: <input type="text" id="bookAuthor" name="author" required></li>
+                            <li><label for="bookNOPages">No of Pages: </label><input type="number" id="bookNOPages" name="pages" min="1" required></li>
+                            <li><label for="bookIsRead">Read? </label><input type="checkbox" id="bookIsRead" checked></li>
+                        </ul>
+                        <div>
+                            <button value="cancel" formnovalidate>Cancel</button>
+                            <button id="addBtn" value="default">Add</button>
+                          </div>
+                    </form>
+                </div>
             </dialog>
             <button id="addNewBtn">Add a new book</button>
         </header>
         <main>
             <div class="container">
                 <dialog id="showBookDialog">
-                    <div id="showTitle"></div>
-                    <div id="showAuthor"></div>
-                    <div id="showNOPages"></div>
-                    <div id="readStatus"></div>
-                    <div>
-                        <button class="close">Close</button>
+                    <div class="dialogContainer">
+                        <div id="showTitle"></div>
+                        <div id="showAuthor"></div>
+                        <div id="showNOPages"></div>
+                        <div id="readStatus"></div>
+                        <div>
+                            <button class="close">Close</button>
+                        </div>
                     </div>
                 </dialog>
                 <div class="bookShelf"></div>

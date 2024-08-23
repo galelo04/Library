@@ -23,7 +23,21 @@ h1{
     font-family: "Caveat", cursive;
     font-size: 4rem;
 }
-#addNewBtn{
+input[type="text"],input[type="number"]{
+    appearance: none;
+    border: none;
+    height: 40px;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    color: #422006;
+}
+li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+button{
     background-color: #422006;
     color:wheat;
     padding: 10px;
@@ -88,10 +102,20 @@ ul{
 dialog{
     padding: 50px;
     position: absolute;
+    font-size: 2rem; 
+    border-radius: 10px;
+    color: #422006;
+    width: 30%;
     top:50%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    background-color: wheat;
+}
+.dialogContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 ::backdrop{
     background-color: black;

@@ -132,7 +132,14 @@ closeBtn.addEventListener('click',()=>{
 });
 
 addBtn.addEventListener("click", (event) => {
-    event.preventDefault(); // We don't want to submit this fake form
-    addBookToShelf(createBook());
-    addBookDialog.close(); // Have to send the select box value here.
+    const form = document.querySelector("dialog form");
+    event.preventDefault();
+    if(form.checkValidity()){
+        
+        addBookToShelf(createBook());
+        addBookDialog.close(); 
+    }
+    else{
+        alert('Please fill in all required fields correctly.');
+    }
   });
